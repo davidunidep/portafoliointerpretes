@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Manual</title>
+	<link rel="stylesheet" href="bootstrap.css">
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 well">
+			<h1>Análisis Léxico</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h2 var="0" id="titulo1"><input class="btn btn-primary" id="t1" type="submit" value="+" onclick="mostrar1()"> Tema1.- Aspectos generales de un analizador léxico</h2>
+			<p style="display:none" id="tema1">
+				Contenido tema1
+			</p>	
+		</div>
+	</div>
+		<div class="row">
+		<div class="col-xs-12">
+			<h2 var="0" id="titulo2"><input class="btn btn-warning" id="t2" type="submit" value="+" onclick="mostrar2()"> Tema2.- Definicion de grafos y automatas</h2>
+			<p style="display:none" id="tema2">
+				Contenido tema2
+			</p>	
+		</div>
+	</div>
+		<div class="row">
+		<div class="col-xs-12">
+			<h2 var="0" id="titulo3"><input class="btn btn-danger" id="t3" type="submit" value="+" onclick="mostrar3()"> Tema3.- Definicion de clases, estados y tokens</h2>
+			<p style="display:none" id="tema3">
+				Contenido tema3
+			</p>	
+		</div>
+	</div>
+		<div class="row">
+		<div class="col-xs-12">
+			<h2 var="0" id="titulo4"><input class="btn btn-default" id="t4" type="submit" value="+" onclick="mostrar4()"> Tema4.- Matriz de transición de estados y matriz de salida</h2>
+			<p style="display:none" id="tema4">
+				Contenido tema4
+			</p>	
+		</div>
+	</div>
+		<div class="row">
+		<div class="col-xs-12">
+			<h2 var="0" id="titulo5"><input class="btn btn-success" id="t5" type="submit" value="+" onclick="mostrar5()"> Tema5.- Funcionamiento de un Scanner</h2>
+			<p style="display:none" id="tema5">
+				Contenido tema5
+			</p>	
+		</div>
+	</div>
+</div>
+	
+	<script>
+	function mostrar1(){
+		if(document.getElementById("titulo1").var=="0"){
+		document.getElementById("tema1").style.display="";
+		document.getElementById("titulo1").var="1";
+		document.getElementById("t1").value="-";
+		}
+		else{
+			document.getElementById("tema1").style.display="none";
+		document.getElementById("titulo1").var="0";
+		document.getElementById("t1").value="+";
+
+		}
+	}
+		function mostrar2(){
+		if(document.getElementById("titulo2").var=="0"){
+		document.getElementById("tema2").style.display="";
+		document.getElementById("titulo2").var="1";
+		document.getElementById("t2").value="-";
+		}
+		else{
+			document.getElementById("tema2").style.display="none";
+		document.getElementById("titulo2").var="0";
+		document.getElementById("t2").value="+";
+
+		}
+	}
+		function mostrar3(){
+		if(document.getElementById("titulo3").var=="0"){
+		document.getElementById("tema3").style.display="";
+		document.getElementById("titulo3").var="1";
+		document.getElementById("t3").value="-";
+		}
+		else{
+			document.getElementById("tema3").style.display="none";
+		document.getElementById("titulo3").var="0";
+		document.getElementById("t3").value="+";
+
+		}
+	}
+		function mostrar4(){
+		if(document.getElementById("titulo4").var=="0"){
+		document.getElementById("tema4").style.display="";
+		document.getElementById("titulo4").var="1";
+		document.getElementById("t4").value="-";
+		}
+		else{
+			document.getElementById("tema4").style.display="none";
+		document.getElementById("titulo4").var="0";
+		document.getElementById("t4").value="+";
+
+		}
+	}
+		function mostrar5(){
+		if(document.getElementById("titulo5").var=="0"){
+		document.getElementById("tema5").style.display="";
+		document.getElementById("titulo5").var="1";
+		document.getElementById("t5").value="-";
+		}
+		else{
+			document.getElementById("tema5").style.display="none";
+		document.getElementById("titulo5").var="0";
+		document.getElementById("t5").value="+";
+
+		}
+	}
+	
+	</script>
+</body>
+</html>

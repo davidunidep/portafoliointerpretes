@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo1</title>
+	<link rel="stylesheet" href="bootstrap.css">
+
+	<script>
+
+	function borrar(){
+			document.getElementById("errorNombre").innerHTML="";
+			}
+			function borrar1(){
+			document.getElementById("errorEdad").innerHTML="";
+			}
+	function imprime(){
+		
+		
+		var nombre=document.getElementById("nombre").value;
+		var edad=document.getElementById("edad").value;
+		if(nombre==""||edad==""){
+		document.getElementById("errorNombre").style.color="red";
+		document.getElementById("errorNombre").innerHTML="*Favor de llenar campo";
+}
+
+else{
+	if(edad<18)
+	{
+		document.getElementById("errorEdad").style.color="red";
+		document.getElementById("errorEdad").innerHTML="*Eres menor de edad";
+		}
+	else{
+		alert("bienvenido: " + nombre);
+	}
+	}
+
+	}
+	</script>
+</head>
+<body>
+	<h1>Ejemplo JS</h1>
+	<input type="text" id="nombre" placeholder="Escribe nombre" onfocus="borrar()">
+	<p id="errorNombre"></p>
+	<input type="text" id="edad" placeholder="Escribe edad" onfocus="borrar1()">
+	<p id="errorEdad"></p>
+	<button class="btn btn-primary" onclick="return imprime()">Imprime</button>
+
+	
+</body>
+</html>

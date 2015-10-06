@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Validacion</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<script>
+	function validar(){
+		var texto=/^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+		var nombre=document.getElementById("nombre").value;
+		var matricula=document.getElementById("matricula").value;
+		var edad=document.getElementById("edad").value;
+		var telefono=document.getElementById("telefono").value;
+		var correo=document.getElementById("correo").value;
+		if(nombre==""|| !texto.test(nombre)){
+
+			document.getElementById("validanombre").innerHTML="<img src='red.png' width='20px'>";
+		}
+		else{
+		document.getElementById("validanombre").innerHTML="<img src='green.png' width='20px'>";
+			}
+		if(matricula==""){
+			document.getElementById("validamatricula").innerHTML="<img src='red.png' width='20px'>";
+		}
+		else{
+		document.getElementById("validamatricula").innerHTML="<img src='green.png' width='20px'>";
+			}
+		if(edad==""){
+			document.getElementById("validaedad").innerHTML="<img src='red.png' width='20px'>";
+		}
+		else{
+		document.getElementById("validaedad").innerHTML="<img src='green.png' width='20px'>";
+			}
+		if(telefono==""){
+			document.getElementById("validatelefono").innerHTML="<img src='red.png' width='20px'>";
+		}
+		else{
+		document.getElementById("validatelefono").innerHTML="<img src='green.png' width='20px'>";
+			}
+		if(correo==""){
+			document.getElementById("validacorreo").innerHTML="<img src='red.png' width='20px'>";
+		}
+		else{
+		document.getElementById("validacorreo").innerHTML="<img src='green.png' width='20px'>";
+			}
+
+	}
+			
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1>Registro de alumnos</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3 well">
+				<div class="form-group">
+					<label>Nombre:</label>
+					<input type="text" id="nombre" class="form-control" placeholder="Ingresa nombre"><div id="validanombre"></div>
+				</div>
+				<div class="form-group">
+					<label>Matricula:</label>
+					<input type="text" id="matricula" class="form-control" placeholder="Ingresa matricula"><div id="validamatricula"></div>
+				</div>
+				<div class="form-group">
+					<label>Edad:</label>
+					<input type="text" id="edad" class="form-control" placeholder="Ingresa edad"><div id="validaedad"></div>
+				</div>
+				<div class="form-group">
+					<label>Sexo:</label><br>
+					<input name="sexo" type="radio" id="sexo"  value="Femenino" checked>Femenino<br>
+					<input name="sexo" type="radio" id="sexo"  value="Masculino">Masculino
+				</div>
+				<div class="form-group">
+					<label>Carrera:</label><br>
+					<select id="carrera" class="form control">
+						<option value="sistemas">Ing. en Sistemas Computacionales</option>
+						<option value="diseño">Lic. en Diseño Grafico y Multimedia</option>
+						<option value="derecho">Lic. en Derecho</option>
+						<option value="mercadotecnia">Lic. en Mercadotecnia y Publicidad</option>
+						<option value="administracion">Lic. en Administracion de Empresas</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Telefono:</label>
+					<input type="text" id="telefono" class="form-control" placeholder="Ingresa telefono"><div id="validatelefono"></div>
+				</div>
+				<div class="form-group">
+					<label>Correo electronico:</label>
+					<input type="text" id="correo" class="form-control" placeholder="Ingresa correo electronico"><div id="validacorreo"></div>
+				</div>
+				<div class="form-group">
+					<label>Datos adicionales:</label>
+					<textarea id="datos" class="form-control" placeholder="Ingresa datos adicionales"></textarea>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-default" onclick="validar()">Registrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

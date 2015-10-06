@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Interpretes</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<script>
+	function simular() {
+
+		var codigo=document.getElementById("codigo").value;
+		if(codigo==""){
+			document.getElementById("error").style.color="red";
+			document.getElementById("error").innerHTML="*Favor de llenar campo";
+		}
+		else{
+			document.getElementById("resultado").innerHTML=codigo;
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row well">
+			<div class="col-xs-12 text-center">
+			<h2>Simulacion Interpretes</h2>
+			<h3>David Arredondo</h3>
+			
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-6">
+				<h2>Codigo</h2>
+				<div class="form-group">
+					<textarea rows="10" type="text" class="form-control" name="nombre" id="codigo" placeholder="Nombre"></textarea>
+					<p id="error"></p>
+				</div>
+				<button class= "btn btn-danger" onclick="simular()">Simular</button>
+
+			</div>
+			<div class="col-xs-6">
+				<h2>Resultado</h2>
+				<p id="resultado"></p>
+			</div>
+		</div>
+		<BR>
+		<div class="row well">
+			<div class="col-xs-12 text-center">
+				UNIDEP 2015 INTERPRETES &COPY;
+			</div>
+			
+		</div>
+	</div>
+
+
+</body>
+</html>
